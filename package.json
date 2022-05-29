@@ -1,0 +1,23 @@
+{
+  "name": "Single-Page-App-Practice",
+  "version": "1.0.0",
+  "description": "Practice area for SPA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jykwon24/Single-Page-App-Practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jykwon24/Single-Page-App-Practice/issues"
+  },
+  "homepage": "https://github.com/Jykwon24/Single-Page-App-Practice#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
