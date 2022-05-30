@@ -1,3 +1,5 @@
+import Dashboard from "./views/Dashboard.js"
+
 // This uses the history.pushState create an entry on the browser history URL
 const navigateTo = url => {
   history.pushState(null, null, url)
@@ -6,9 +8,9 @@ const navigateTo = url => {
 
 const router = async () => {
   const routes = [
-    { path: "/", view: () => console.log('viewing dashboard') },
-    { path: "/posts", view: () => console.log('viewing posts') },
-    { path: "/settings", view: () => console.log('viewing settings') }
+    { path: "/", view: Dashboard }
+    // { path: "/posts", view: () => console.log('viewing posts') },
+    // { path: "/settings", view: () => console.log('viewing settings') }
   ]
 
   // Testing each route for potential match
@@ -28,7 +30,9 @@ const router = async () => {
     }
   }
 
-  console.log(match.route.view())
+  const view = new match.route.view()
+
+  document.querySelector('#app').innerHTML = await view.getHtml()
 }
 
 window.addEventListener("popstate", router)
